@@ -19,14 +19,14 @@ $(window).mousewheel(function (e) {
 
 /* image cycle */
 
-var images = [
+let images = [
   "Images/pizzalanding3.jpg",
   "Images/pizza-baked-chesse-spicy-7t-1920x1080.jpg",
 ];
 
-var $top = $("#hero-inner");
+let $top = $("#hero-inner");
 
-var i = 0;
+let i = 0;
 
 setInterval(function () {
   $top.animate({ opacity: 0 }, 400, function () {
@@ -40,6 +40,20 @@ setInterval(function () {
     });
   });
 }, 3500);
+
+let swiper = new Swiper(".home-slider", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+});
 
 /* burger toggle */
 
@@ -64,3 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+/* javascript lessons */
+
+const voorNaam = "Robin";
+const achterNaam = "van Druten";
+const volledigeNaam = `Mijn naam is : ${voorNaam} ${achterNaam}.`;
+
+let leeftijd = 16;
+
+console.log(volledigeNaam);
+
+const text = document.querySelector("#yes");
+console.log(text);
+
+text.innerHTML = "doei!";
+text.style.backgroundColor = "blue";
