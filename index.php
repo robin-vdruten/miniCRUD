@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <?php include 'Includes/head.php'; ?>
+  </head>
+  <body>
+    <header>
+      <?php include 'Includes/header.php'; ?>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="swiper-container home-slider">
+          <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+              <div class="image">
+                <img
+                  src="images/png-transparent-pizza-garlic-bread-food-clock-ingredient-pizza-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span>Onze pizza's</span>
+                <h3>Pizza piza</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  natus dolor cumque?
+                </p>
+                <a href="#" class="btn">order now</a>
+              </div>
+            </div>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <title>Document</title>
-</head>
+            <div class="swiper-slide slide">
+              <div class="image">
+                <img
+                  src="images/png-transparent-pizza-garlic-bread-food-clock-ingredient-pizza-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span>Onze pizza's</span>
+                <h3>Pizza pizza</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  natus dolor cumque?
+                </p>
+                <a href="#" class="btn">order now</a>
+              </div>
+            </div>
 
-<body>
-    <form action="PHP/uitkomst.php" method="post">
-        <input type="text" name="naam" id="naam" placeholder="username">
-        <input type="password" name="password" id="password" placeholder="password">
-        <input type="text" name="leeftijd" id="leeftijd" placeholder="leeftijd">
-        <input type="submit" value="Send" name="send">
-    </form>
-
+            <div class="swiper-slide slide">
+              <div class="image">
+                <img
+                  src="images/png-transparent-pizza-garlic-bread-food-clock-ingredient-pizza-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span>Onze pizza's</span>
+                <h3>Pizza pizza</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  natus dolor cumque?
+                </p>
+                <a href="#" class="btn">order now</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <?php include 'Includes/footer.php'; ?>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/mousewheel.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

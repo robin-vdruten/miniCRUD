@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans&display=swap");
 /* header is #fff section is #eee  --black: #01050e;*/
 
 * {
   font-family: "Nunito", sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,11 +14,25 @@
   transition: all 0.2s linear;
 }
 
+:root {
+  --green: #027532;
+  --black: #01050e;
+  --white: #eee;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --testcolor: #242323;
+  --testcolor2: #141313;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 5.5rem;
   scroll-behavior: smooth;
+}
+
+body {
+  background: var(--testcolor);
 }
 
 section {
@@ -26,15 +41,6 @@ section {
 
 section:nth-child(even) {
   background: var(--testcolor);
-}
-
-:root {
-  --green: #027532;
-  --black: #01050e;
-  --light-color: #666;
-  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  --testcolor: #242323;
-  --testcolor2: #141313;
 }
 
 a {
@@ -80,6 +86,12 @@ a {
   background: var(--green);
 }
 
+.header .navbar a.notactive {
+  color: #fff;
+  background: var(--green);
+  display: none;
+}
+
 .header .icons i,
 .header .icons a {
   cursor: pointer;
@@ -101,6 +113,10 @@ a {
   background: var(--green);
 }
 
+.header .icons a.active {
+  background: var(--green);
+}
+
 .header .icons {
   display: flex;
 }
@@ -119,7 +135,7 @@ a {
   width: 80%;
   padding-top: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -132,7 +148,7 @@ a {
 .footer .footer-container .container h3 {
   padding: 0.5rem 0;
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
 }
 
 .footer .footer-container .container a {
@@ -206,7 +222,7 @@ a {
 }
 
 .home .home-slider .slide .content h3 {
-  color: var(--black);
+  color: var(--white);
   font-size: 7rem;
 }
 
@@ -219,6 +235,212 @@ a {
 
 .swiper-pagination-bullet-active {
   background: var(--green);
+}
+
+/* login page */
+
+.login {
+  background-image: url(../images/loginachtergrond.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.login {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  place-content: center;
+}
+
+.login .container {
+  display: flex;
+  height: 320px;
+  width: 640px;
+}
+
+.login .container .left {
+  background: var(--testcolor2);
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  width: 50%;
+}
+
+.login .container .right {
+  background: var(--testcolor);
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+  color: #f1f1f2;
+  position: relative;
+  width: 50%;
+}
+
+.login .container .login-text {
+  color: var(--white);
+  font-size: 50px;
+  font-weight: 900;
+  margin: 50px 40px 40px;
+}
+
+.login .container .eula {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 40px;
+}
+
+svg {
+  position: absolute;
+  width: 320px;
+}
+path {
+  fill: none;
+  stroke: url(#linearGradient);
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+}
+.form {
+  margin: 40px;
+  position: absolute;
+}
+label {
+  color: #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+#submit {
+  color: #707075;
+  margin-top: 45px;
+  transition: color 300ms;
+}
+#submit:hover {
+  color: #f2f2f2;
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
+}
+
+/* menu kaart */
+
+.menu {
+  background-image: url(../images/loginachtergrond.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu .menu-wrapper {
+  width: 100%;
+  padding-top: 8rem;
+}
+
+.menu .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+}
+
+.menu .container .box {
+  background: var(--testcolor);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.menu .container .box .image {
+  height: 25rem;
+  width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu .container .box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.menu .container .box .content {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.menu .container .box .content h3 {
+  color: var(--white);
+  font-size: 2.5rem;
+}
+
+.menu .container .box .content p {
+  color: var(--light-color);
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.menu .container .box .content .price {
+  color: var(--green);
+  margin-left: 1rem;
+  font-size: 2.5rem;
+}
+
+/* reserveren */
+
+.reserveren {
+  background-image: url(../images/loginachtergrond.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reserveren .reserveren-wrapper {
+  width: 100%;
+  padding-top: 8rem;
+}
+
+.reserveren .container {
+  display: flex;
+  height: 320px;
 }
 
 @media (max-width: 991px) {
@@ -240,12 +462,70 @@ a {
     display: block;
   }
   .header .nav-bar {
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--testcolor2);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .nav-bar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .header .navbar {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--testcolor2);
+  }
+
+  .login {
+    height: 100vh;
+  }
+
+  .login .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+
+  .login .container .left {
+    height: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-height: 260px;
+  }
+
+  .login .container .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
   }
 }
 
 @media screen and (max-width: 500px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
 }
