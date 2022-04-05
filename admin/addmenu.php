@@ -1,5 +1,7 @@
 <?php
-include_once '../Includes/connector.php'; ?>
+include 'session.php';
+include_once '../Includes/connector.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

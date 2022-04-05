@@ -15,13 +15,11 @@ include_once '../Includes/connector.php';
       rel="stylesheet"
       id="bootstrap-css"
     />
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="CSS/admin.css"/>
   </head>
   <body>
     <a href="logout.php">Logout</a>
-    <a href="../login.php">Login</a>
+    <a href="../login.php">Home page</a>
     <a href="addmenu.php">Add Menu</a>
     <section class="menu-read">
       <div class="container">
@@ -29,11 +27,23 @@ include_once '../Includes/connector.php';
           <div class="col-md-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <span></span>Menu
+                <span>Menu</span>
               </div>
               <div class="panel-body">
                 <ul class="list-group">
                   <?php include 'PHP/readmenu.PHP'; ?>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <span>reserveringen</span>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group">
+                  <?php include 'PHP/readreserveringen.PHP'; ?>
                 </ul>
               </div>
             </div>

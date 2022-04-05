@@ -8,9 +8,13 @@ if (isset($_POST['toevoegen']) && isset($_POST['id'])) {
     $image = $_FILES['foto']['name'];
 
     if (move_uploaded_file($_FILES['foto']['tmp_name'], $target)) {
-        $msg = 'Uploaded file succes';
+        $msg = 'gelukt';
     } else {
-        $msg = 'Uploaded file failed';
+        $msg = 'niet gelukt';
+    }
+
+    if ($_FILES['foto']['name'] == '') {
+        $image = $_POST['picture'];
     }
 
     $sql =
@@ -24,6 +28,7 @@ if (isset($_POST['toevoegen']) && isset($_POST['id'])) {
     $stmt->execute();
 
     header('Location: ../admin.php');
+
     exit();
 } else {
     header('Location: ../admin.php');

@@ -26,9 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: ../admin/admin.php');
             exit();
         } else {
-            echo "<script language='javascript'>";
-            echo "alert('WRONG INFORMATION')";
-            echo '</script>';
+            header('Location: ../login.php');
             die();
         }
     }

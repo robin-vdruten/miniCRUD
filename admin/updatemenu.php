@@ -44,8 +44,9 @@ if (isset($_GET['id'])) {
             </div>
             <div class="forminput">
               <label>foto product</label>
-              <input type="file" name="foto" required />
-              <img src="../Images/<?php echo $picture; ?>">
+              <input type="file" name="foto" />
+              <img height="50" src="../Images/<?php echo $picture; ?>">
+              <input type="hidden" name="picture"  value="<?php echo $picture; ?>" />
             </div>
             <div class="forminput">
               <label>prijs product</label>
