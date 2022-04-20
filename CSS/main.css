@@ -124,7 +124,7 @@ a {
 .footer {
   display: flex;
   justify-content: center;
-  background: blue;
+  background: red;
 }
 
 .footer-wrapper {
