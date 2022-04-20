@@ -8,9 +8,14 @@
       <?php include 'Includes/header.php'; ?>
     </header>
     <main>
+      <?php include 'Includes/searchBar.php'; ?>
       <section class="reserveren">
         <div class="reserveren-wrapper">
-          <form action="PHP/createreservation.php" method="post" class="container">
+          <form
+            action="PHP/createreservation.php"
+            method="post"
+            class="container"
+          >
             <div class="elem-group">
               <label for="name">Your Name</label>
               <input
@@ -67,7 +72,7 @@
                 />
               </div>
               <div class="elem-group inlined">
-                <label for="checkin-date">Check-in</label>
+                <label for="checkin-date">Check-in Date</label>
                 <input type="date" id="checkin-date" name="checkin" required />
               </div>
             </div>

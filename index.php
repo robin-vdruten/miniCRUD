@@ -8,6 +8,7 @@
       <?php include 'Includes/header.php'; ?>
     </header>
     <main>
+      <?php include 'Includes/searchBar.php'; ?>
       <section class="home" id="home">
         <div class="swiper-container home-slider">
           <div class="swiper-wrapper wrapper">

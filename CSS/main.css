@@ -39,10 +39,6 @@ section {
   padding: 2rem 9%;
 }
 
-section:nth-child(even) {
-  background: var(--testcolor);
-}
-
 a {
   text-decoration: none;
 }
@@ -176,6 +172,63 @@ a {
 
 .footer .credit span {
   color: var(--green);
+}
+
+/* Search bar */
+
+#search-form {
+  position: fixed;
+  top: -110%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1004;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+#search-form.active {
+  top: 0;
+}
+
+#search-form #search-box {
+  width: 50rem;
+  border-bottom: 0.1rem solid #fff;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: none;
+  background: none;
+}
+
+#search-form #search-box::placeholder {
+  color: #eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search-form label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#search-form label:hover {
+  color: var(--green);
+}
+
+#search-form #close {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
 }
 
 /* landing page */
@@ -381,6 +434,10 @@ input::-moz-focus-inner {
   box-shadow: var(--box-shadow);
 }
 
+.menu .container .box:hover {
+  transform: scale(1.1);
+}
+
 .menu .container .box .image {
   height: 25rem;
   width: 100%;
@@ -435,7 +492,7 @@ input::-moz-focus-inner {
 }
 
 form.container {
-  background: var(--testcolor);
+  background: var(--testcolor2);
   box-shadow: 0px 0px 40px 16px rgb(0 0 0 / 22%);
   border-radius: 20px;
   padding: 10px;
@@ -469,12 +526,17 @@ form.container {
 }
 
 .reserveren input {
-  border-radius: 2px;
-  border: 2px solid var(--green);
+  border-bottom: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to right, green, var(--green)) 1;
   box-sizing: border-box;
   font-size: 1.25em;
   width: 100%;
   padding: 10px;
+}
+
+.reserveren input:focus {
+  border-image: linear-gradient(to right, #03ff03, #4ee44e) 1;
 }
 
 .reserveren elem-group.inlined input {
@@ -538,6 +600,11 @@ form.container {
     background: var(--testcolor2);
   }
 
+  #search-form #search-box {
+    width: 90%;
+    margin: 0 1rem;
+  }
+
   .login {
     height: 100vh;
   }
@@ -564,7 +631,14 @@ form.container {
 }
 
 @media screen and (max-width: 500px) {
+  .reserveren .reserveren-wrapper {
+    width: 100%;
+  }
   html {
     font-size: 55%;
   }
+}
+
+#show-up {
+  display: none;
 }

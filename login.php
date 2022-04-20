@@ -8,6 +8,7 @@
         <?php include 'Includes/header.php'; ?>
     </header>
     <main>
+      <?php include 'Includes/searchBar.php'; ?>
       <section class="login">
         <div class="login-wrapper">
           <div class="container">

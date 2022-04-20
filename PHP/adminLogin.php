@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ) {
             session_start();
             $_SESSION['adminrestaurant'] = true;
+            $_SESSION['adminid'] = $user['ID'];
+            $_SESSION['adminname'] = $user['adminname'];
             header('Location: ../admin/admin.php');
             exit();
         } else {
@@ -30,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             die();
         }
     }
+} else {
+    header('Location: ../login.php');
 }
 
 ?>

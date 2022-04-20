@@ -13,7 +13,8 @@
   transition: all 0.2s linear;
 }
 
-.menu-read {
+.menu-read,
+.admin-user {
   margin-top: 50px;
   margin-left: 50px;
 }
@@ -56,4 +57,55 @@ a.list-group-item:focus {
 }
 .list-group {
   margin-bottom: 0px;
+}
+
+/* addmenu */
+
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(116, 116, 116);
+}
+
+.form form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form .forminput {
+  width: 100%;
+}
+
+.form .forminput label {
+  font-size: 25px;
+}
+
+.form .forminput input {
+  border: 1px solid black;
+  height: 25px;
+}
+
+.form .forminput textarea {
+  border: 1px solid black;
+}
+
+.form button {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: white;
+  background: black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+
+.form button:hover {
+  background: #027532;
+  letter-spacing: 0.1rem;
 }
