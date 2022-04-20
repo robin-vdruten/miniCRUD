@@ -6,7 +6,8 @@ $sql = 'SELECT * FROM reserveringen';
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->fetchAll();
-foreach ($result as $key => $value) { ?>
+try {
+    foreach ($result as $key => $value) { ?>
 
 <li class="list-group-item">
   <div class="checkbox">
@@ -29,6 +30,9 @@ foreach ($result as $key => $value) { ?>
 </li>
 
 <?php }
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 ?>
 
 

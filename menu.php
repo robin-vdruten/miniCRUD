@@ -9,10 +9,18 @@
       <?php include 'Includes/header.php'; ?>
     </header>
     <main>
+      <?php include 'Includes/searchBar.php'; ?>
       <section class="menu">
         <div class="menu-wrapper">
           <div class="container">
-            <?php include 'PHP/menu.php'; ?>
+            <?php
+            include 'PHP/menu.php';
+            if (!isset($_GET['search']) || !$_GET['search']) {
+                menu();
+            } else {
+                searchmenu();
+            }
+            ?>
           </div>
         </div>
       </section>
