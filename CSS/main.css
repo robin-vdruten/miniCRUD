@@ -46,7 +46,6 @@ a {
 /* header / footer */
 
 .header {
-  background-color: #01050e;
   position: fixed;
   top: 0;
   left: 0;
@@ -131,6 +130,7 @@ a {
 .footer-wrapper {
   width: 80%;
   padding-top: 2rem;
+  padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -372,6 +372,75 @@ a {
 
 .swiper-pagination-bullet-active {
   background: var(--green);
+}
+
+/* About */
+
+.about {
+  background-image: url(../images/loginachtergrond.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about .about-wrapper {
+  background-color: var(--testcolor);
+  border-radius: 0.5rem;
+  width: 80%;
+  margin-top: 8rem;
+  padding: 2rem;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about .sub-heading {
+  text-align: center;
+  color: var(--green);
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.about .heading {
+  text-align: center;
+  color: var(--black);
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.about .row .image {
+  flex: 1 1 45rem;
+}
+
+.about .row .image img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+  color: var(--black);
+  font-size: 4rem;
+  padding: 0.5rem 0;
+}
+
+.about .row .content p {
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  line-height: 2;
 }
 
 /* login page */
