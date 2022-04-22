@@ -1,5 +1,7 @@
 <?php
-$page = basename($_SERVER['PHP_SELF']); ?>
+$page = basename($_SERVER['PHP_SELF']);
+session_start();
+?>
 <div class="header">
   <div class="logo">
     <a href="#" class="logo"
