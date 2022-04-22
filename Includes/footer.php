@@ -10,10 +10,10 @@ echo '<div class="footer">
             <div class="container">
               <h3>Links</h3>
               <a class="active" href="#home">home</a>
-              <a href="#about">about</a>
-              <a href="#menu">menu</a>
-              <a href="#review">review</a>
-              <a href="#contact">order</a>
+              <a href="about.php">about</a>
+              <a href="menu.php">menu</a>
+              <a href="reservation.php">reserveren</a>
+              <a href="login.php">login</a>
             </div>
             <div class="container">
               <h3>Contact</h3>

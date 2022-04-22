@@ -1,7 +1,5 @@
 <?php
-$page = basename($_SERVER['PHP_SELF']);
-session_start();
-?>
+$page = basename($_SERVER['PHP_SELF']); ?>
 <div class="header">
   <div class="logo">
     <a href="#" class="logo"
@@ -17,7 +15,13 @@ session_start();
         } ?>"
         >home</a
       >
-      <a href="#about">about</a>
+      <a
+        href="about.php"
+        class="<?php if ($page == 'about.php') {
+            echo ' active';
+        } ?>"
+        >about</a
+      >
       <a
         href="menu.php"
         class="<?php if ($page == 'menu.php') {

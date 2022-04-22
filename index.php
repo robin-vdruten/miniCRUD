@@ -26,7 +26,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus dolor cumque?
                 </p>
-                <a href="#" class="btn">order now</a>
+                <a href="menu.php" class="btn">Kijk Menukaart</a>
               </div>
             </div>
 
@@ -44,7 +44,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus dolor cumque?
                 </p>
-                <a href="#" class="btn">order now</a>
+                <a href="menu.php" class="btn">Kijk Menukaart</a>
               </div>
             </div>
 
@@ -62,7 +62,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
                   natus dolor cumque?
                 </p>
-                <a href="#" class="btn">order now</a>
+                <a href="menu.php" class="btn">Kijk Menukaart</a>
               </div>
             </div>
           </div>
