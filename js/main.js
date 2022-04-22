@@ -23,7 +23,7 @@ document.querySelector("#close").onclick = () => {
 $(document).ready(function (e) {
   $("#search-box").keyup(function () {
     $("#show-up").css("display", $(this).val() !== "" ? "flex" : "none");
-    var text = $(this).val();
+    let text = $(this).val();
     $.ajax({
       type: "GET",
       url: "PHP/search.php",
