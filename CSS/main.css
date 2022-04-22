@@ -46,6 +46,7 @@ a {
 /* header / footer */
 
 .header {
+  background-color: #01050e;
   position: fixed;
   top: 0;
   left: 0;
